@@ -1,16 +1,115 @@
-# React + Vite
+# Futuro em Recomeço – Plataforma de Reskilling & Upskilling
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação desenvolvida para a **Global Solution – Front-End Design – Web Development (2º semestre/2025)**, alinhada ao tema:
 
-Currently, two official plugins are available:
+> **O Futuro do Trabalho – Conectando pessoas, competências e propósito por meio da tecnologia.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A proposta é construir uma **Single Page Application (SPA)** que apresenta perfis de profissionais cujas profissões foram impactadas por automação, IA e novas tecnologias, destacando suas jornadas de **reskilling** (mudança de área) e **upskilling** (aperfeiçoamento dentro da área).
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Resumo do projeto
 
-## Expanding the ESLint configuration
+O projeto **Futuro em Recomeço** é uma plataforma web que:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Exibe **cards de profissionais** com:
+  - foto, nome, cargo atual, área de atuação e principais habilidades técnicas;
+- Abre um **modal interativo** ao clicar em um card, mostrando:
+  - informações pessoais e acadêmicas;
+  - experiências profissionais (antes e depois da transição);
+  - habilidades técnicas, soft skills e idiomas;
+  - trilhas recomendadas de aprendizagem;
+  - projetos e certificações;
+- Possui **botões funcionais** no modal:
+  - `⭐ Recomendar profissional` (simula recomendação via alerta);
+  - `✉ Enviar mensagem` (simula envio de mensagem via alerta);
+- Trabalha com um **arquivo JSON de profissionais** (70+ perfis gerados a partir de perfis base), com propriedades como:
+  - `nome`, `foto`, `cargo`, `area`, `habilidadesTecnicas`,  
+    `softSkills`, `experiencias`, `formacao`, `idiomas`,  
+    `profissaoAnterior`, `tipoTransicao`, `nivelRiscoAutomacao`,  
+    `trilhasRecomendadas`, `projetos`, `certificacoes` etc.;
+- Inclui **barra de filtros e busca**:
+  - busca por nome, área ou habilidades;
+  - filtro por área de atuação;
+  - filtro por tipo de transição: `reskilling` / `upskilling`;
+  - filtro por nível de risco de automação (`alto`, `médio`, `baixo`);
+- Implementa **modo claro/escuro** (dark mode) com persistência no `localStorage`;
+- Tem layout **responsivo**, otimizado para:
+  - mobile (1 coluna),
+  - telas médias (2 colunas),
+  - desktop (3 colunas).
+
+O foco é mostrar, de forma visual e interativa, como profissionais de funções consideradas “em extinção” podem se reposicionar no mercado, conectando sua experiência anterior com novas competências.
+
+---
+
+##  Usuários e senhas
+
+Este projeto **não possui autenticação** (login/senha).
+
+Toda navegação é aberta, sem diferentes perfis de usuário.  
+Os botões de ação do modal (`Recomendar profissional` e `Enviar mensagem`) simulam as ações através de mensagens (`alert`) apenas para fins de demonstração.
+
+> **Não há usuários e senhas cadastrados.**
+
+---
+
+##  Tecnologias utilizadas
+
+- **React** (SPA, componentes, hooks)
+- **Vite** (bundler / dev server)
+- **JavaScript** (ES6+)
+- **Tailwind CSS v4 + @tailwindcss/vite**
+  - utilização de utilitários responsivos;
+  - suporte a tema escuro via `@custom-variant` e classe `.dark`;
+- **HTML5 / CSS3**
+- JSON local para simular a “base de profissionais”
+
+---
+
+##  Estrutura básica do projeto
+
+```text
+.
+├── public/
+│   └── (assets estáticos, por exemplo logo do projeto)
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── FiltersBar.jsx
+│   │   ├── ProfessionalCard.jsx
+│   │   ├── ProfessionalModal.jsx
+│   │   ├── AboutSection.jsx
+│   │   ├── Footer.jsx
+│   │   └── ThemeToggle.jsx
+│   ├── data/
+│   │   └── profissionais.js   # JSON com ~70 perfis
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+
+
+
+# Instalação do projeto (passo a passo)
+
+Pré-requisitos:
+
+Node.js (versão LTS recomendada – 18+)
+
+npm 
+
+-git clone https://github.com/FelipeBonilha1/gs-reskilling.git
+-cd gs-reskilling 
+-npm install
+-npm run dev
+
+
+
+Nome completo	RM	Curso /     Turma
+Felipe Bonilha	  RM562356	Engenharia de Software – 2º semestre
+Felipe Rodrigues  RM565341  Engenharia de Software – 2º semestre
