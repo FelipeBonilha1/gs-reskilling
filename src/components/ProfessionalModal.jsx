@@ -1,4 +1,21 @@
+import { useEffect } from "react";
+
 export default function ProfessionalModal({ profissional, onClose }) {
+  // Hook sempre é chamado, mas só faz algo se tiver profissional
+  useEffect(() => {
+    if (!profissional) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [profissional, onClose]);
+
+  // Se não tiver profissional, não renderiza nada
   if (!profissional) return null;
 
   const handleBackdropClick = (e) => {
@@ -17,6 +34,9 @@ export default function ProfessionalModal({ profissional, onClose }) {
     <div
       className="fixed inset-0 z-30 flex items-center justify-center bg-slate-950/60 px-4 py-6"
       onClick={handleBackdropClick}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Detalhes de ${profissional.nome}`}
     >
       <div className="relative flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-slate-700/60 bg-slate-950 text-slate-50 shadow-2xl">
         <button

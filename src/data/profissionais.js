@@ -1,5 +1,7 @@
 // src/data/profissionais.js
-const profissionais = [
+
+// 1) Perfis base bem variados
+const baseProfissionais = [
   {
     id: 1,
     nome: "Ana Souza",
@@ -52,7 +54,6 @@ const profissionais = [
       },
     ],
     areaInteresses: ["Suporte em TI", "Redes", "Segurança da Informação"],
-
     profissaoAnterior: "Cobradora de ônibus",
     tipoTransicao: "reskilling",
     novoRumoProfissional: "Suporte em TI",
@@ -119,7 +120,6 @@ const profissionais = [
       "Ferramentas de CRM",
       "Chatbots e automação de atendimento",
     ],
-
     profissaoAnterior: "Operador de caixa",
     tipoTransicao: "reskilling",
     novoRumoProfissional: "Atendimento Omnichannel",
@@ -186,7 +186,6 @@ const profissionais = [
       "Automação de armazéns",
       "Análise de dados aplicada à logística",
     ],
-
     profissaoAnterior: "Auxiliar de logística",
     tipoTransicao: "upskilling",
     novoRumoProfissional: "Operações logísticas orientadas a dados",
@@ -253,7 +252,6 @@ const profissionais = [
       "Visualização de dados",
       "Automação de relatórios",
     ],
-
     profissaoAnterior: "Atendente de telemarketing",
     tipoTransicao: "reskilling",
     novoRumoProfissional: "Análise de Dados",
@@ -315,12 +313,7 @@ const profissionais = [
         nivel: "Básico",
       },
     ],
-    areaInteresses: [
-      "E-commerce",
-      "Social selling",
-      "Experiência do cliente",
-    ],
-
+    areaInteresses: ["E-commerce", "Social selling", "Experiência do cliente"],
     profissaoAnterior: "Vendedora de loja física",
     tipoTransicao: "reskilling",
     novoRumoProfissional: "Vendas Digitais",
@@ -387,7 +380,6 @@ const profissionais = [
       "Robótica básica",
       "Manutenção preditiva",
     ],
-
     profissaoAnterior: "Operador de linha de produção",
     tipoTransicao: "upskilling",
     novoRumoProfissional: "Manutenção de equipamentos automatizados",
@@ -398,8 +390,279 @@ const profissionais = [
       "Segurança em máquinas",
     ],
   },
-
-  // 👉 Depois você continua adicionando até chegar nos ~60 perfis.
+  {
+    id: 7,
+    nome: "Patrícia Gomes",
+    foto: "https://i.pravatar.cc/150?img=10",
+    cargo: "Agente de Mobilidade Urbana Digital",
+    resumo:
+      "Atuou anos como operadora de pedágio e hoje trabalha com monitoramento digital de tráfego e atendimento remoto.",
+    localizacao: "São José dos Campos / SP",
+    area: "Mobilidade & Serviços Públicos",
+    habilidadesTecnicas: ["Monitoramento de tráfego", "Sistemas de CFTV", "Atendimento digital"],
+    softSkills: ["Empatia", "Comunicação clara", "Adaptabilidade"],
+    experiencias: [
+      {
+        empresa: "AutoPista Vale",
+        cargo: "Operadora de pedágio",
+        inicio: "2011-08",
+        fim: "2021-12",
+        descricao:
+          "Cobrança de tarifas, orientação a motoristas e apoio em situações de emergência na rodovia.",
+      },
+      {
+        empresa: "Centro de Operações Urbanas",
+        cargo: "Agente de mobilidade",
+        inicio: "2022-03",
+        fim: null,
+        descricao:
+          "Monitoramento de câmeras, atendimento remoto a cidadãos e apoio em ações de mobilidade urbana.",
+      },
+    ],
+    formacao: [
+      {
+        curso: "Curso técnico em Gestão Pública",
+        instituicao: "ETEC",
+        ano: 2021,
+      },
+    ],
+    projetos: [
+      {
+        titulo: "Protocolo de atendimento remoto a incidentes",
+        link: "",
+        descricao:
+          "Criação de um fluxo padrão para atendimento remoto a incidentes leves em vias urbanas.",
+      },
+    ],
+    certificacoes: ["Atendimento ao cidadão", "Introdução a mobilidade urbana"],
+    idiomas: [
+      {
+        idioma: "Inglês",
+        nivel: "Básico",
+      },
+    ],
+    areaInteresses: ["Mobilidade urbana", "Cidades inteligentes", "Atendimento digital"],
+    profissaoAnterior: "Operadora de pedágio",
+    tipoTransicao: "reskilling",
+    novoRumoProfissional: "Agente de mobilidade digital",
+    nivelRiscoAutomacao: "alto",
+    trilhasRecomendadas: [
+      "Introdução a cidades inteligentes",
+      "Atendimento digital ao cidadão",
+      "Sistemas de monitoramento de tráfego",
+    ],
+  },
+  {
+    id: 8,
+    nome: "Diego Santos",
+    foto: "https://i.pravatar.cc/150?img=22",
+    cargo: "Analista de Suporte ao Cliente Digital",
+    resumo:
+      "Ex-atendente de balcão em lanchonete, hoje atua com suporte ao cliente em plataformas de delivery.",
+    localizacao: "Porto Alegre / RS",
+    area: "Atendimento & Experiência do Cliente",
+    habilidadesTecnicas: ["Ferramentas de help desk", "Chat online", "Gestão de tickets"],
+    softSkills: ["Agilidade", "Empatia", "Organização"],
+    experiencias: [
+      {
+        empresa: "Lanches do Centro",
+        cargo: "Atendente de balcão",
+        inicio: "2014-03",
+        fim: "2021-05",
+        descricao:
+          "Atendimento ao público, preparo de pedidos simples e organização do salão.",
+      },
+      {
+        empresa: "FoodTech Delivery",
+        cargo: "Analista de suporte ao cliente",
+        inicio: "2021-09",
+        fim: null,
+        descricao:
+          "Atendimento a restaurantes parceiros e consumidores por chat e e-mail, resolução de problemas em pedidos.",
+      },
+    ],
+    formacao: [
+      {
+        curso: "Curso livre de Suporte ao Cliente Digital",
+        instituicao: "Plataforma Online X",
+        ano: 2021,
+      },
+    ],
+    projetos: [
+      {
+        titulo: "Guia rápido de atendimento para novos analistas",
+        link: "",
+        descricao:
+          "Documento interno com atalhos, respostas padrão e boas práticas de atendimento.",
+      },
+    ],
+    certificacoes: ["Suporte ao cliente online", "Comunicação não violenta"],
+    idiomas: [
+      {
+        idioma: "Inglês",
+        nivel: "Básico",
+      },
+    ],
+    areaInteresses: ["CX", "Delivery", "Plataformas digitais"],
+    profissaoAnterior: "Atendente de balcão",
+    tipoTransicao: "reskilling",
+    novoRumoProfissional: "Suporte ao cliente digital",
+    nivelRiscoAutomacao: "alto",
+    trilhasRecomendadas: [
+      "Fundamentos de atendimento digital",
+      "Uso de ferramentas de help desk",
+      "Gestão de conflitos",
+    ],
+  },
+  {
+    id: 9,
+    nome: "Fernanda Oliveira",
+    foto: "https://i.pravatar.cc/150?img=40",
+    cargo: "Assistente Administrativo com Automação",
+    resumo:
+      "De auxiliar administrativo repetitivo para profissional focada em automatizar tarefas com planilhas e scripts.",
+    localizacao: "Recife / PE",
+    area: "Administração & Backoffice",
+    habilidadesTecnicas: ["Excel avançado", "Automação com planilhas", "No-code básico"],
+    softSkills: ["Organização", "Detalhismo", "Foco em melhoria contínua"],
+    experiencias: [
+      {
+        empresa: "Escritório Alfa",
+        cargo: "Auxiliar administrativo",
+        inicio: "2015-02",
+        fim: "2021-07",
+        descricao:
+          "Lançamentos em planilhas, organização de documentos e apoio em rotinas financeiras simples.",
+      },
+      {
+        empresa: "Escritório Alfa",
+        cargo: "Assistente administrativo com automação",
+        inicio: "2021-08",
+        fim: null,
+        descricao:
+          "Criação de planilhas automatizadas, dashboards simples e integração de formulários online.",
+      },
+    ],
+    formacao: [
+      {
+        curso: "Tecnólogo em Processos Gerenciais",
+        instituicao: "UniRecife",
+        ano: 2019,
+      },
+    ],
+    projetos: [
+      {
+        titulo: "Painel de controle financeiro em planilha",
+        link: "",
+        descricao:
+          "Planilha automatizada para acompanhamento mensal de receitas e despesas com gráficos.",
+      },
+    ],
+    certificacoes: ["Excel avançado", "Automação de processos com no-code"],
+    idiomas: [
+      {
+        idioma: "Inglês",
+        nivel: "Básico",
+      },
+    ],
+    areaInteresses: ["Automação de escritório", "No-code", "Gestão de processos"],
+    profissaoAnterior: "Auxiliar administrativo",
+    tipoTransicao: "upskilling",
+    novoRumoProfissional: "Assistente administrativo com foco em automação",
+    nivelRiscoAutomacao: "médio",
+    trilhasRecomendadas: [
+      "Excel avançado",
+      "Ferramentas no-code",
+      "Gestão de processos administrativos",
+    ],
+  },
+  {
+    id: 10,
+    nome: "Bruno Martins",
+    foto: "https://i.pravatar.cc/150?img=55",
+    cargo: "Operador de E-commerce e Logística",
+    resumo:
+      "De repositor de estoque em supermercado para operador de e-commerce, cuidando de pedidos e logística.",
+    localizacao: "Salvador / BA",
+    area: "Logística & E-commerce",
+    habilidadesTecnicas: ["Sistemas de e-commerce", "Controle de estoque", "Expedição"],
+    softSkills: ["Responsabilidade", "Agilidade", "Organização"],
+    experiencias: [
+      {
+        empresa: "SuperMais",
+        cargo: "Repositor de estoque",
+        inicio: "2013-01",
+        fim: "2020-03",
+        descricao:
+          "Reposição de mercadorias, organização de gôndolas e conferência básica de validade.",
+      },
+      {
+        empresa: "SuperMais Online",
+        cargo: "Operador de e-commerce",
+        inicio: "2020-07",
+        fim: null,
+        descricao:
+          "Separação e conferência de pedidos, contato com entregadores e uso de sistema de e-commerce.",
+      },
+    ],
+    formacao: [
+      {
+        curso: "Curso livre de E-commerce",
+        instituicao: "Plataforma Online Y",
+        ano: 2020,
+      },
+    ],
+    projetos: [
+      {
+        titulo: "Melhoria do fluxo de separação de pedidos",
+        link: "",
+        descricao:
+          "Proposta interna para organizar melhor o fluxo de separação de pedidos em horários de pico.",
+      },
+    ],
+    certificacoes: ["Introdução ao E-commerce", "Logística básica"],
+    idiomas: [
+      {
+        idioma: "Inglês",
+        nivel: "Básico",
+      },
+    ],
+    areaInteresses: ["Logística", "E-commerce", "Atendimento ao cliente"],
+    profissaoAnterior: "Repositor de estoque",
+    tipoTransicao: "reskilling",
+    novoRumoProfissional: "Operador de e-commerce",
+    nivelRiscoAutomacao: "alto",
+    trilhasRecomendadas: [
+      "Fundamentos de e-commerce",
+      "Logística para varejo",
+      "Atendimento ao cliente online",
+    ],
+  },
 ];
+
+// 2) Geração de clones leves para chegar em 60+
+const sufixos = ["Jr.", "Sr.", "Neto", "Filho", "Sobrinho", "III"];
+
+let nextId = baseProfissionais.length + 1;
+const extras = [];
+
+for (let rodada = 0; rodada < 6; rodada++) {
+  baseProfissionais.forEach((p, index) => {
+    // Vai dar 10 (base) + 6*10 (extras) = 70 perfis
+    const sufixo = sufixos[rodada % sufixos.length];
+    extras.push({
+      ...p,
+      id: nextId++,
+      nome: `${p.nome} ${sufixo}`,
+      // pequena variação de localização para parecer mais real
+      localizacao:
+        index % 2 === 0
+          ? p.localizacao
+          : p.localizacao.replace(" /", " - Região /"),
+    });
+  });
+}
+
+const profissionais = [...baseProfissionais, ...extras];
 
 export default profissionais;
