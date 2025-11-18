@@ -61,9 +61,18 @@ export default function App() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-50">
-      <Header />
+     
+      <Header
+        logoIcon={
+          <img
+            src="/icon.work.png" 
+            alt="Logo Futuro em Recomeço"
+            className="h-5 w-5 object-contain"
+          />
+        }
+      />
 
-      <main className="mx-auto max-w-6xl space-y-4 px-4 py-6">
+      <main className="mx-auto flex w-full max-w-6xl flex-col space-y-4 px-3 py-6 sm:px-4">
         <Hero totalProfs={profissionaisData.length} />
 
         <FiltersBar
@@ -84,7 +93,7 @@ export default function App() {
               a busca ou os filtros.
             </p>
           ) : (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {profissionaisFiltrados.map((prof) => (
                 <ProfessionalCard
                   key={prof.id}
