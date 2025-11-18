@@ -50,7 +50,11 @@ Este projeto **não possui autenticação** (login/senha).
 Toda navegação é aberta, sem diferentes perfis de usuário.  
 Os botões de ação do modal (`Recomendar profissional` e `Enviar mensagem`) simulam as ações através de mensagens (`alert`) apenas para fins de demonstração.
 
+<<<<<<< HEAD
 > ✅ **Não há usuários e senhas cadastrados.**
+=======
+> **Não há usuários e senhas cadastrados.**
+>>>>>>> dafc20543efda89f681f09e6fa63cb4691c29bc8
 
 ---
 
