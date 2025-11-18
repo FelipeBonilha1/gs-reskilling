@@ -61,16 +61,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-50">
-     
-      <Header
-        logoIcon={
-          <img
-            src="/icon.work.png" 
-            alt="Logo Futuro em Recomeço"
-            className="h-5 w-5 object-contain"
-          />
-        }
-      />
+      <Header />
 
       <main className="mx-auto flex w-full max-w-6xl flex-col space-y-4 px-3 py-6 sm:px-4">
         <Hero totalProfs={profissionaisData.length} />
