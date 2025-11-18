@@ -8,8 +8,8 @@ export default function Footer() {
           upskilling.
         </p>
         <p className="text-[11px]">
-          Desenvolvido em React + Vite + Tailwind 
-        </p>
+          Desenvolvido em React + Vite + Tailwind · Felipe Bonilha e Felipe Rodrigues
+        </p> 
       </div>
     </footer>
   );

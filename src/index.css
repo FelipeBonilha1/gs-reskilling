@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* 👇 ISSO DIZ PRO TAILWIND V4:
+   "dark:alguma-coisa" só vale quando tiver .dark no HTML
+*/
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   color-scheme: light;
 }
@@ -8,16 +13,14 @@
   color-scheme: dark;
 }
 
-/* Scrollbar mais discreta (opcional) */
+/* Opcional: estilos da scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(148, 163, 184, 0.6); /* tailwind: slate-400/60 */
+  background-color: rgba(148, 163, 184, 0.6);
   border-radius: 999px;
 }
-
 ::-webkit-scrollbar-track {
-  background-color: rgba(15, 23, 42, 0.05); /* slate-900/5 */
+  background-color: rgba(15, 23, 42, 0.05);
 }

@@ -1,3 +1,4 @@
+// src/components/FiltersBar.jsx
 export default function FiltersBar({
   searchTerm,
   onSearchChange,
@@ -9,15 +10,15 @@ export default function FiltersBar({
   onRiscoFilterChange,
 }) {
   return (
-    <section className="space-y-3 rounded-xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/80">
+    <section className="space-y-3 rounded-xl border border-slate-200 bg-white/90 p-4 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/90">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
             Profissionais em transição
-          </h1>
+          </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400">
-            Explore trajetórias de requalificação e descubra novas
-            possibilidades de carreira.
+            Explore trajetórias de requalificação e descubra novas possibilidades
+            de carreira.
           </p>
         </div>
       </div>
@@ -28,28 +29,28 @@ export default function FiltersBar({
           placeholder="Buscar por nome, habilidade ou área..."
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none ring-0 placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-slate-700 dark:bg-slate-900 dark:placeholder:text-slate-500"
+          className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-0 placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-50 dark:placeholder:text-slate-500"
         />
 
         <select
           value={areaFilter}
           onChange={(e) => onAreaFilterChange(e.target.value)}
-          className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-slate-700 dark:bg-slate-900"
+          className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-50"
         >
           <option value="todas">Área (todas)</option>
           <option value="Tecnologia">Tecnologia</option>
           <option value="Atendimento & Experiência do Cliente">
-            Atendimento & CX
+            Atendimento &amp; CX
           </option>
           <option value="Logística">Logística</option>
-          <option value="Vendas & Marketing">Vendas & Marketing</option>
-          <option value="Indústria & Manutenção">Indústria & Manutenção</option>
+          <option value="Vendas & Marketing">Vendas &amp; Marketing</option>
+          <option value="Indústria & Manutenção">Indústria &amp; Manutenção</option>
         </select>
 
         <select
           value={tipoTransicaoFilter}
           onChange={(e) => onTipoTransicaoFilterChange(e.target.value)}
-          className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-slate-700 dark:bg-slate-900"
+          className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-50"
         >
           <option value="todos">Tipo de transição</option>
           <option value="reskilling">Reskilling</option>
@@ -59,7 +60,7 @@ export default function FiltersBar({
         <select
           value={riscoFilter}
           onChange={(e) => onRiscoFilterChange(e.target.value)}
-          className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-slate-700 dark:bg-slate-900"
+          className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-50"
         >
           <option value="todos">Risco de automação</option>
           <option value="alto">Alto</option>

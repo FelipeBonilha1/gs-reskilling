@@ -7,6 +7,7 @@ import FiltersBar from "./components/FiltersBar";
 import ProfessionalCard from "./components/ProfessionalCard";
 import ProfessionalModal from "./components/ProfessionalModal";
 import Footer from "./components/Footer";
+import AboutSection from "./components/AboutSection";
 
 function filtrarProfissionais(
   profissionais,
@@ -77,9 +78,12 @@ export default function App() {
           onRiscoFilterChange={setRiscoFilter}
         />
 
+        {/* Nova seção explicando o projeto */}
+        <AboutSection />
+
         <section className="mt-4">
           {profissionaisFiltrados.length === 0 ? (
-            <p className="rounded-lg border border-dashed border-slate-300 bg-white/70 px-4 py-6 text-center text-sm text-slate-500 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-400">
+            <p className="rounded-lg border border-dashed border-slate-300 bg-white/80 px-4 py-6 text-center text-sm text-slate-500 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-300">
               Nenhum profissional encontrado com esses critérios. Tente ajustar
               a busca ou os filtros.
             </p>
