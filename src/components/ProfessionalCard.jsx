@@ -35,7 +35,7 @@ export default function ProfessionalCard({ profissional, onClick }) {
         <img
           src={foto}
           alt={`Foto de ${nome}`}
-          className="h-12 w-12 flex-shrink-0 rounded-full object-cover ring-2 ring-blue-500/50"
+          className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-blue-500/50"
         />
         <div className="flex flex-1 flex-col">
           <div className="flex items-center justify-between gap-2">
