@@ -1,7 +1,7 @@
 // src/components/Hero.jsx
 export default function Hero({ totalProfs }) {
   return (
-    <section className="mb-4 rounded-2xl bg-gradient-to-br from-blue-600 via-indigo-600 to-slate-900 px-4 py-6 text-slate-50 shadow-sm dark:from-slate-900 dark:via-indigo-800 dark:to-slate-950">
+    <section className="mb-4 rounded-2xl bg-linear-to-br from-blue-600 via-indigo-600 to-slate-900 px-4 py-6 text-slate-50 shadow-sm dark:from-slate-900 dark:via-indigo-800 dark:to-slate-950">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="space-y-2 md:max-w-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-100/90">
